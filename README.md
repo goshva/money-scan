@@ -1,43 +1,61 @@
-# Quasar App (money-scan)
+# Photo Text Scanner
 
-MoneyTracker
+Мобильное приложение для распознавания текста с фотографий, построенное на Quasar Framework и Capacitor.
 
-## Install the dependencies
+## Функциональность
 
-```bash
-yarn
-# or
+- 📸 Съемка фото и выбор из галереи
+- 🔄 Поворот изображений
+- 📖 Распознавание текста (OCR) с помощью Tesseract.js
+- 💾 Сохранение истории сканирований
+- 📱 Нативный интерфейс для iOS и Android
+
+## Технологии
+
+- **Quasar Framework** - Vue.js фреймворк
+- **Capacitor** - Кроссплатформенная мобильная runtime
+- **Tesseract.js** - OCR движок
+- **Pinia** - State management
+
+## Быстрый старт
+
+### Установка зависимостей
+\`\`\`bash
 npm install
-```
+\`\`\`
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-
-```bash
+### Запуск в dev режиме
+\`\`\`bash
 quasar dev
-```
+\`\`\`
 
-### Lint the files
+### Сборка для мобильных платформ
 
-```bash
-yarn lint
-# or
-npm run lint
-```
+#### Android
+\`\`\`bash
+./scripts/build-android.sh
+\`\`\`
 
-### Format the files
+#### iOS
+\`\`\`bash
+./scripts/build-ios.sh
+\`\`\`
 
-```bash
-yarn format
-# or
-npm run format
-```
+## Структура проекта
 
-### Build the app for production
+\`\`\`
+src/
+├── composables/     # Vue composables
+├── components/      # Vue компоненты
+├── pages/          # Страницы приложения
+├── layouts/        # Layout компоненты
+├── stores/         # Pinia stores
+└── router/         # Маршрутизация
+\`\`\`
 
-```bash
-quasar build
-```
+## Скрипты
 
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+- \`npm run dev\` - Запуск dev сервера
+- \`npm run build\` - Сборка для production
+- \`./scripts/build-android.sh\` - Сборка для Android
+- \`./scripts/build-ios.sh\` - Сборка для iOS

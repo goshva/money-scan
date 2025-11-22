@@ -1,1 +1,104 @@
-/* app global css */
+// app global css
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fafafa;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+// Стили для разрешений
+.permission-banner {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Стили для сканера
+.scanner-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.image-preview {
+  background: white;
+  border-radius: 16px;
+  margin: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.recognized-text {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.history-item {
+  border-left: 4px solid #1976d2;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: #f5f5f5;
+    transform: translateX(4px);
+  }
+}
+
+// Анимации для поворота
+.rotate-enter-active {
+  transition: transform 0.5s ease;
+}
+
+.rotate-leave-active {
+  transition: transform 0.5s ease;
+}
+
+// Адаптивные стили
+@media (max-width: 600px) {
+  .image-actions {
+    flex-direction: column;
+    align-items: center;
+    
+    .q-btn {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+  
+  .additional-actions {
+    flex-direction: column;
+    align-items: center;
+    
+    .q-btn {
+      width: 100%;
+      margin-bottom: 4px;
+    }
+  }
+  
+  .permission-banner {
+    margin: 8px;
+    
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .col-auto {
+      margin-top: 8px;
+    }
+  }
+}
